@@ -1,0 +1,11 @@
+server:
+  port: 8765
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/persondb
+    username: user1
+    password: pass1
+
+
+
