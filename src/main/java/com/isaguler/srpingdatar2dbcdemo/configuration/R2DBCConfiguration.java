@@ -5,6 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.data.r2dbc.core.R2dbcEntityTemplate;
 import org.springframework.r2dbc.connection.init.ConnectionFactoryInitializer;
 import org.springframework.r2dbc.connection.init.ResourceDatabasePopulator;
 
@@ -20,5 +21,10 @@ public class R2DBCConfiguration {
         connectionFactoryInitializer.setDatabasePopulator(resource);
         return connectionFactoryInitializer;
     }
+
+    /*@Bean
+    R2dbcEntityTemplate r2dbcEntityTemplate(ConnectionFactory connectionFactory) {
+        return new R2dbcEntityTemplate(connectionFactory);
+    }*/
 
 }
