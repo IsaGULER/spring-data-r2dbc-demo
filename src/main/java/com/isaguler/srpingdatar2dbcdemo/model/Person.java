@@ -9,7 +9,6 @@ import org.springframework.data.relational.core.mapping.Table;
 @Table(name = "person")
 @Getter
 @Setter
-@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
