@@ -7,5 +7,9 @@ spring:
     username: user1
     password: pass1
 
+springdoc:
+  swagger-ui:
+    path: "/api-docs"
+
 
 

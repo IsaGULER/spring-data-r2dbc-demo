@@ -25,13 +25,7 @@ public class PersonService {
     }
 
     public Mono<Person> save(PersonDTO personDTO) {
-        Person person = new Person();
-        person.setFirstname(personDTO.getFirstname());
-        person.setLastname(personDTO.getLastname());
-        person.setAge(personDTO.getAge());
-
-        return personRepository.save(person);
-
+        return personRepository.save(Person.converter(personDTO));
     }
 
     public void delete(Long personId) {

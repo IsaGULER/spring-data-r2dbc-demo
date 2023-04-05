@@ -1,5 +1,6 @@
 package com.isaguler.srpingdatar2dbcdemo.model;
 
+import com.isaguler.srpingdatar2dbcdemo.dto.PersonDTO;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import lombok.*;
@@ -20,5 +21,14 @@ public class Person {
     private String firstname;
     private String lastname;
     private Long age;
+
+    public static Person converter(PersonDTO personDTO) {
+        Person person = new Person();
+        person.setFirstname(personDTO.getFirstname());
+        person.setLastname(personDTO.getLastname());
+        person.setAge(personDTO.getAge());
+
+        return person;
+    }
 
 }
